@@ -1,0 +1,100 @@
+$primary: #409eff !default;
+$success: #00d100 !default;
+$wraning: #e6a23c !default;
+$danger: #f56c6c !default;
+
+$button-space: 14px !default;
+$button-round: 4px !default;
+
+.a-button {
+    padding: 0 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dcdfe6;
+    border-radius: $button-round;
+    background-color: #fff;
+    font-size: 14px;
+    color: #606266;
+    height: 40px;
+    + .a-button { margin-left: $button-space; }
+    > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-prefix { margin-right: 10px; }
+    .icon-suffix { margin-left: 10px; }
+}
+.a-button-medium {
+    height: 36px;
+}
+.a-button-small {
+    padding: 0 15px;
+    height: 32px;
+    font-size: 12px;
+    .icon-prefix { margin-right: 5px; }
+    .icon-suffix { margin-left: 5px; }
+}
+.a-button-mini {
+    padding: 0 15px;
+    height: 28px;
+    font-size: 12px;
+    .icon-prefix { margin-right: 5px; }
+    .icon-suffix { margin-left: 5px; }
+}
+.a-button[disabled] {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+.a-button-primary {
+    background-color: $primary;
+    border-color: $primary;
+    color: #fff;
+    &.is-border {
+        background-color: transparent;
+        color: $primary;
+    }
+}
+.a-button-success {
+    background-color: $success;
+    border-color: $success;
+    color: #fff;
+    &.is-border {
+        background-color: transparent;
+        color: $success;
+    }
+}
+.a-button-wraning {
+    background-color: $wraning;
+    border-color: $wraning;
+    color: #fff;
+    &.is-border {
+        background-color: transparent;
+        color: $wraning;
+    }
+}
+.a-button-danger {
+    background-color: $danger;
+    border-color: $danger;
+    color: #fff;
+    &.is-border {
+        background-color: transparent;
+        color: $danger;
+    }
+}
+/** 圆角 */
+.is-round { border-radius: 100px; }
+/** 块级按钮 */
+.a-button-block { display: block; width: 100%; }
+/** 加载动画 */
+.icon-loading {
+    animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
